@@ -11,4 +11,11 @@ http.createServer((req, res) => {
       }
     )
   }
+  if(req.url === '/contatos'){
+    fs.readFile(
+      path.join(__dirname, "public", "contatos.html"), (err, content) => {
+        res.end(content)
+      }
+    )
+  }
 }).listen(5000, () => {console.log("Running")})
