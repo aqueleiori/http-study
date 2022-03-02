@@ -18,4 +18,7 @@ http.createServer((req, res) => {
       }
     )
   }
+  if(req.url === '/bolo'){
+    return res.end("cake")
+  }
 }).listen(5000, () => {console.log("Running")})
