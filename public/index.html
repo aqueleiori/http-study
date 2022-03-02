@@ -3,8 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+                          
+
+  <style type="text/css" media="screen">
+  .card{
+    width: 500px;
+    height:500px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding:20px;
+  }
+  button{
+    width:150px;
+    height:50px;
+  }
+  input{
+    width:200px;
+  }
+  </style>
+
+  <script charset="utf-8">
+    function btn(){
+      let a = document.getElementById("show")
+      a.innerHTML = document.getElementById("data").value
+      if(document.getElementById("data").value == ""){
+        a.innerHTML = "Input vazio"
+      }
+    } 
+  </script>
 </head>
 <body>
-  <h1>Home from file</h1> 
+  <div class="card">
+    <h2 id="show">Hello World !</h2>
+    <input type="text" placeholder="Enter your name" value="" name="" id="data"/>
+    <button type="button" onClick="btn()">Enviar</button>
+  </div>
 </body>
 </html>
